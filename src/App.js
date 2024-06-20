@@ -27,8 +27,8 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
     <div className="app" id={theme}>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
       <h1>FilmFlow</h1>
       <div className="theme-switch">
         <span>Dark Mode</span>    
@@ -55,8 +55,8 @@ const App = () => {
           <h2>No Movie found</h2>
         </div>
       )}
-    </div>
     </ThemeContext.Provider>
+    </div>
     
   );
 };

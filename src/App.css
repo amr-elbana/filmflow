@@ -16,16 +16,18 @@
     --dark-color_s: rgba(0, 0, 0, 0.543);
 }
 
-
 body {
     font-family: var(--font-roboto);
     background-color:var(--dark-color);
 }
 
+#light body {
+    background-color: #f9d3b4 !important;
+}
 
-#light  {
-    background-color: #f9d3b4;
-    height: max-content;
+#light { 
+    background-color: #f9d3b4 ;
+
 }
 .app {
     padding: 4rem;
