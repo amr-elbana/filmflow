@@ -17,7 +17,7 @@ const App = () => {
       
       setMovies(data.Search);
     };
-  const[theme, setTheme] = useState("light  ");
+  const[theme, setTheme] = useState("light");
   const toggleTheme = () =>{
     setTheme((curr)=> (curr === "light" ? "dark" :"light"));
   }
@@ -57,6 +57,7 @@ const App = () => {
       )}
     </div>
     </ThemeContext.Provider>
+    
   );
 };
 

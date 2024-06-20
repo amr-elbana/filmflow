@@ -12,15 +12,21 @@
     --font-raleway: "Raleway", sans-serif;
     --light-color:#f9d3b4;
     --dark-color: rgb(33, 36, 38);
-    --light-color_s:#ffb77d94;
+    --light-color_s:#ffa7609c;
     --dark-color_s: rgba(0, 0, 0, 0.543);
 }
 
+
 body {
     font-family: var(--font-roboto);
-    background-color: rgb(33, 36, 38);
+    background-color:var(--dark-color);
 }
 
+
+#light  {
+    background-color: #f9d3b4;
+    height: max-content;
+}
 .app {
     padding: 4rem;
 
@@ -28,9 +34,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-#light{
-    background-color: #f9d3b4;
 }
 .theme-switch{
     position: absolute;
@@ -45,13 +48,13 @@ body {
     justify-content: center;
     align-items: center;
     -webkit-box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
-    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color);
 }
 #light .theme-switch{
     background-color: var(--dark-color);
     color:var(--light-color);
-    -webkit-box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-colo_s);
-    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+    -webkit-box-shadow: 5px 5px 7px var(--dark-color_s), -5px -5px 7px var(--light-colo_s);
+    box-shadow: 5px 5px 7px var(--dark-color), -5px -5px 7px var(--light-color_s);
 }
 
 h1 {
@@ -88,8 +91,13 @@ h1 {
     padding: 1.5rem 1.75rem;
     border-radius: 3rem;
     background: #1f2123;
-    -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-    box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+    -webkit-box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+}
+#light .search {
+    background: #f9d3b4;
+    -webkit-box-shadow: 5px 5px 7px var(--dark-color_s), -5px -5px 7px var(--light-color_s);
+    box-shadow: 5px 5px 7px var(--dark-color_s), -5px -5px 7px var(--light-color_s);
 }
 
 .search input {
@@ -104,12 +112,21 @@ h1 {
     color: #a1a1a1;
     background: #1f2123;
 }
+#light .search input {
+    color: var(--dark-color);
+    background: #f9d3b4;
+}
 
 .search img {
     width: 35px;
     height: 35px;
     cursor: pointer;
 }
+#light .search img {
+    filter: brightness(0);
+}
+
+
 
 /* .search button {
   padding: 20px 40px;
@@ -139,6 +156,9 @@ h1 {
     font-size: 1.25rem;
     color: #f9d3b4;
     font-family: var(--font-raleway);
+}
+#light .empty h2 {
+    color: var(--dark-color);
 }
 
 .container {
