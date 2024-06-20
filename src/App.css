@@ -10,11 +10,15 @@
 :root {
     --font-roboto: "Roboto Slab", serif;
     --font-raleway: "Raleway", sans-serif;
+    --light-color:#f9d3b4;
+    --dark-color: rgb(33, 36, 38);
+    --light-color_s:#ffb77d94;
+    --dark-color_s: rgba(0, 0, 0, 0.543);
 }
 
 body {
     font-family: var(--font-roboto);
-    background-color: #212426;
+    background-color: rgb(33, 36, 38);
 }
 
 .app {
@@ -25,13 +29,48 @@ body {
     align-items: center;
     flex-direction: column;
 }
+#light{
+    background-color: #f9d3b4;
+}
+.theme-switch{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+}
+#light .theme-switch{
+    background-color: var(--dark-color);
+    color:var(--light-color);
+    -webkit-box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-colo_s);
+    box-shadow: 5px 5px 7px var(--light-color_s), -5px -5px 7px var(--dark-color_s);
+}
 
 h1 {
     font-size: 3rem;
     letter-spacing: 0.9px;
     background: linear-gradient(90deg,
-            rgba(249, 211, 180, 1) 0%,
+            rgba(249, 211, 180, 1) 60%,
             rgba(249, 211, 180, 0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+#light h1 {
+    font-size: 3rem;
+    letter-spacing: 0.9px;
+    background: linear-gradient(90deg,
+            rgb(33, 36, 38) 60%,
+            rgba(249, 211, 180, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
