@@ -30,7 +30,6 @@ const App = () => {
 
   return (
     <div className="app" id={theme}>
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
       <h1>FilmFlow</h1>
       <div className="theme-switch"> 
         <span><h3>Mode</h3></span> 
@@ -58,7 +57,6 @@ const App = () => {
           <h2>No Movie found</h2>
         </div>
       )}
-    </ThemeContext.Provider>
     </div>
     
   );
