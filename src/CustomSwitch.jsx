@@ -26,7 +26,7 @@ const CustomSwitch = styled(Switch)(({ theme }) => ({
     },
   },
   '& .MuiSwitch-thumb': {
-    backgroundColor: theme.palette.mode === 'light' ? '#003892' : '#C19875',
+    backgroundColor: theme.palette.mode === 'light' ? '#618985' : '#C19875',
     width: 32,
     height: 32,
     '&::before': {

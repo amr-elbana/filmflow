@@ -34,7 +34,7 @@ const App = () => {
       <h1>FilmFlow</h1>
       <div className="theme-switch"> 
         <span><h3>Mode</h3></span> 
-        <CustomSwitch checked={theme === "dark"} onChange={toggleTheme} />
+        <CustomSwitch  onChange={toggleTheme} />
         
       </div>
       <div className="search">
