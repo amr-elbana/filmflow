@@ -5,7 +5,6 @@ import SearchIcon from "./search.svg";
 import CustomSwitch from './CustomSwitch'; // Adjust the path if necessary
 
 
-
 export const ThemeContext = createContext(null);
 
 const API_URL = "http://www.omdbapi.com?apikey=fd28c03e";
