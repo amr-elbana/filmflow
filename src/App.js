@@ -1,8 +1,10 @@
 import React, { useEffect, useState, createContext } from "react";
-import ReactSwitch from "react-switch";
 import MovieCard from "./MovieCard";
 import "./App.css";
 import SearchIcon from "./search.svg";
+import CustomSwitch from './CustomSwitch'; // Adjust the path if necessary
+
+
 
 export const ThemeContext = createContext(null);
 
@@ -23,16 +25,17 @@ const App = () => {
   }
 
   useEffect(() => {
-    searchMovies("spiderman");
+    searchMovies("Batman");
   }, []);
 
   return (
     <div className="app" id={theme}>
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <h1>FilmFlow</h1>
-      <div className="theme-switch">
-        <span>Dark Mode</span>    
-        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+      <div className="theme-switch"> 
+        <span><h3>Mode</h3></span> 
+        <CustomSwitch checked={theme === "dark"} onChange={toggleTheme} />
+        
       </div>
       <div className="search">
         <input
